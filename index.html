@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DrillViz Pro - Ingeniería de Perforación</title>
+    <!-- Tailwind CSS with Dark Mode Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                850: '#1e293b', // Custom dark shade
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <!-- FontAwesome for Drilling Symbols -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- SheetJS for Excel Parsing -->
+    <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+    <style>
+      body {
+        font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+      /* Custom Scrollbar for tables */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #94a3b8;
+        border-radius: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #64748b;
+      }
+      /* Dark mode scrollbar */
+      .dark .custom-scrollbar::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #475569;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-900 text-slate-200 transition-colors duration-300">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
